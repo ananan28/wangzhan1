@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kelly Khoo — Early-stage venture investor focused on biotechnology, frontier technology, climate technology and clean energy." />
+  <meta name="theme-color" content="#0a0d10" />
+  <title>Kelly Khoo — Venture Investor</title>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/favicon.png" />
+  <link rel="canonical" href="https://kellykhoo.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Kelly Khoo" />
+  <meta property="og:title" content="Kelly Khoo — Venture Investor" />
+  <meta property="og:description" content="Kelly Khoo — Early-stage venture investor focused on biotechnology, frontier technology, climate technology and clean energy." />
+  <meta property="og:url" content="https://kellykhoo.com/" />
+  <meta property="og:locale" content="en_US" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Kelly Khoo",
+  "alternateName": "KellyKhoo",
+  "url": "https://kellykhoo.com/",
+  "inLanguage": "en"
+}
+  </script>
+  <style>
+    :root{
+      --bg:#0a0d10;
+      --bg-soft:#10151a;
+      --card:rgba(255,255,255,.055);
+      --card-strong:rgba(255,255,255,.085);
+      --text:#f2efe8;
+      --muted:#a7adb4;
+      --line:rgba(255,255,255,.12);
+      --accent:#c8ab70;
+      --accent-2:#e5d2a7;
+      --max:1180px;
+      --radius:24px;
+      --shadow:0 30px 80px rgba(0,0,0,.28);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:
+        radial-gradient(circle at 82% 12%, rgba(200,171,112,.13), transparent 31%),
+        radial-gradient(circle at 18% 38%, rgba(78,116,128,.12), transparent 28%),
+        var(--bg);
+      color:var(--text);
+      font-family:Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height:1.6;
+      overflow-x:hidden;
+    }
+
+    a{color:inherit;text-decoration:none}
+    button{font:inherit}
+    .container{width:min(calc(100% - 40px), var(--max));margin:auto}
+    .section{padding:110px 0}
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:10px;
+      color:var(--accent-2);text-transform:uppercase;letter-spacing:.18em;
+      font-size:12px;font-weight:700
+    }
+    .eyebrow::before{content:"";width:28px;height:1px;background:var(--accent)}
+    .title{
+      margin:18px 0 20px;
+      font-size:clamp(38px,5vw,72px);
+      line-height:1.05;letter-spacing:-.045em;
+      font-weight:600
+    }
+    .section-title{
+      margin:18px 0 14px;
+      font-size:clamp(30px,4vw,52px);
+      line-height:1.1;letter-spacing:-.035em;
+      font-weight:600
+    }
+    .lead{font-size:clamp(18px,2vw,22px);color:#c9ced2;max-width:760px}
+    .muted{color:var(--muted)}
+    .divider{height:1px;background:var(--line)}
+
+    nav{
+      position:fixed;inset:0 0 auto 0;z-index:50;
+      backdrop-filter:blur(18px);
+      background:linear-gradient(to bottom, rgba(10,13,16,.82), rgba(10,13,16,.38));
+      border-bottom:1px solid transparent;
+      transition:.3s ease;
+    }
+    nav.scrolled{border-color:var(--line);background:rgba(10,13,16,.86)}
+    .nav-inner{
+      height:78px;display:flex;align-items:center;justify-content:space-between
+    }
+    .brand{font-size:15px;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
+    .nav-links{display:flex;align-items:center;gap:28px}
+    .nav-links a{font-size:14px;color:#c9ced2;transition:.2s}
+    .nav-links a:hover{color:var(--text)}
+    .lang{
+      border:1px solid var(--line);background:rgba(255,255,255,.03);
+      color:var(--text);border-radius:999px;padding:8px 12px;cursor:pointer
+    }
+    .menu-btn{display:none;background:none;border:0;color:var(--text);font-size:24px}
+
+    .hero{
+      min-height:100svh;display:flex;align-items:center;padding:130px 0 70px;
+      position:relative
+    }
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:70px;align-items:end}
+    .hero-copy{padding-top:30px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      min-height:50px;padding:0 20px;border-radius:999px;
+      border:1px solid var(--line);transition:.25s ease;font-weight:600;font-size:14px
+    }
+    .btn.primary{background:var(--text);color:#0a0d10;border-color:var(--text)}
+    .btn.primary:hover{transform:translateY(-2px);box-shadow:0 12px 34px rgba(242,239,232,.14)}
+    .btn.secondary:hover{border-color:rgba(255,255,255,.35);background:rgba(255,255,255,.05)}
+
+    .hero-card{
+      position:relative;min-height:510px;border-radius:36px;
+      border:1px solid var(--line);overflow:hidden;box-shadow:var(--shadow);
+      background:
+        linear-gradient(145deg, rgba(255,255,255,.09), rgba(255,255,255,.025)),
+        radial-gradient(circle at 60% 20%, rgba(200,171,112,.25), transparent 32%),
+        linear-gradient(145deg, #121a20, #0b0f12 70%);
+    }
+    .hero-card::before{
+      content:"";position:absolute;inset:10%;border-radius:50%;
+      border:1px solid rgba(229,210,167,.25);transform:rotate(-18deg)
+    }
+    .hero-card::after{
+      content:"";position:absolute;width:250px;height:250px;border-radius:50%;
+      left:50%;top:50%;transform:translate(-50%,-50%);
+      background:radial-gradient(circle, rgba(229,210,167,.5), rgba(200,171,112,.08) 45%, transparent 68%);
+      filter:blur(2px)
+    }
+    .hero-photo{
+      position:absolute;inset:0;width:100%;height:100%;
+      object-fit:cover;object-position:50% 50%;display:block
+    }
+    .hero-card.has-photo::before,
+    .hero-card.has-photo::after,
+    .hero-card.has-photo .orbit{display:none}
+    .hero-card.has-photo .hero-meta{text-shadow:0 2px 16px rgba(0,0,0,.95)}
+    .orbit{
+      position:absolute;border:1px solid rgba(255,255,255,.13);border-radius:50%;
+      left:50%;top:50%;transform:translate(-50%,-50%) rotate(25deg)
+    }
+    .orbit.one{width:74%;height:38%}
+    .orbit.two{width:48%;height:80%;transform:translate(-50%,-50%) rotate(-42deg)}
+    .hero-meta{
+      position:absolute;left:20px;right:20px;bottom:18px;
+      display:flex;justify-content:space-between;gap:20px;z-index:2;
+      padding:16px 18px 0;border-top:1px solid rgba(255,255,255,.28);
+      background:linear-gradient(to top, rgba(0,0,0,.34), rgba(0,0,0,0));
+      border-radius:0 0 24px 24px
+    }
+    .hero-meta span{font-size:13px;color:#fff;letter-spacing:.1em;text-transform:uppercase;font-weight:600}
+    .scroll-note{
+      position:absolute;left:50%;bottom:26px;transform:translateX(-50%);
+      font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#8d949b
+    }
+
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .stat{padding:34px 24px;border-right:1px solid var(--line)}
+    .stat:last-child{border-right:0}
+    .stat strong{display:block;font-size:30px;font-weight:600;letter-spacing:-.03em}
+    .stat span{font-size:13px;color:var(--muted)}
+
+    .two-col{display:grid;grid-template-columns:.82fr 1.18fr;gap:90px;align-items:start}
+    .quote{
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:clamp(27px,3.2vw,44px);line-height:1.25;letter-spacing:-.025em;
+      margin:0 0 26px
+    }
+    .quote em{color:var(--accent-2);font-style:normal}
+
+    .focus-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:42px}
+    .focus-card{
+      border:1px solid var(--line);border-radius:var(--radius);padding:28px;
+      background:linear-gradient(160deg, rgba(255,255,255,.055), rgba(255,255,255,.018));
+      min-height:220px;transition:.25s ease
+    }
+    .focus-card:hover{transform:translateY(-4px);border-color:rgba(229,210,167,.32);background:var(--card-strong)}
+    .focus-index{font-size:12px;color:var(--accent-2);letter-spacing:.18em}
+    .focus-card h3{font-size:24px;margin:45px 0 8px;letter-spacing:-.025em}
+    .focus-card p{margin:0;color:var(--muted);font-size:15px}
+
+    .timeline{margin-top:42px}
+    .timeline-item{
+      display:grid;grid-template-columns:150px 1fr;gap:36px;
+      padding:28px 0;border-top:1px solid var(--line)
+    }
+    .timeline-item:last-child{border-bottom:1px solid var(--line)}
+    .timeline-year{color:var(--accent-2);font-weight:600}
+    .timeline-item h3{margin:0 0 6px;font-size:21px}
+    .timeline-item p{margin:0;color:var(--muted)}
+
+    .principles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:42px}
+    .principle{padding:26px;border-top:1px solid var(--line)}
+    .principle h3{font-size:20px;margin:12px 0 8px}
+    .principle p{margin:0;color:var(--muted);font-size:15px}
+
+    .contact{
+      border:1px solid var(--line);border-radius:36px;padding:70px;
+      background:
+        radial-gradient(circle at 80% 20%, rgba(200,171,112,.16), transparent 28%),
+        linear-gradient(145deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      overflow:hidden;position:relative
+    }
+    .contact-grid{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end}
+    .contact .section-title{max-width:760px}
+    .contact-actions{display:flex;flex-direction:column;gap:12px;min-width:220px}
+
+    footer{padding:34px 0 46px;color:#8d949b;font-size:13px}
+    .footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+    [data-zh]{display:none}
+    body.zh [data-en]{display:none}
+    body.zh [data-zh]{display:initial}
+
+    .reveal{opacity:1;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.visible{opacity:1;transform:none}
+
+    @media (max-width:900px){
+      .hero-grid,.two-col,.contact-grid{grid-template-columns:1fr}
+      .hero-card{min-height:400px}
+      .stats{grid-template-columns:1fr}
+      .stat{border-right:0;border-bottom:1px solid var(--line)}
+      .stat:last-child{border-bottom:0}
+      .principles{grid-template-columns:1fr}
+      .focus-grid{grid-template-columns:1fr}
+      .nav-links{
+        position:absolute;top:78px;left:20px;right:20px;
+        padding:20px;border:1px solid var(--line);border-radius:18px;
+        background:rgba(10,13,16,.97);display:none;flex-direction:column;align-items:flex-start
+      }
+      .nav-links.open{display:flex}
+      .menu-btn{display:block}
+      .timeline-item{grid-template-columns:1fr;gap:8px}
+      .contact{padding:42px 28px}
+    }
+    @media (max-width:560px){
+      .container{width:min(calc(100% - 28px), var(--max))}
+      .section{padding:82px 0}
+      .nav-inner{height:70px}
+      .nav-links{top:70px}
+      .hero{padding-top:105px}
+      .hero-card{min-height:340px}
+      .hero-meta{left:20px;right:20px}
+      .hero-meta span:last-child{display:none}
+      .contact-actions{min-width:0}
+    }
+    @media (prefers-reduced-motion:reduce){
+      *{scroll-behavior:auto!important;transition:none!important}
+      .reveal{opacity:1;transform:none}
+    }
+  </style>
+</head>
+<body>
+  <nav id="nav">
+    <div class="container nav-inner">
+      <a href="#top" class="brand">Kelly Khoo</a>
+      <div class="nav-links" id="navLinks">
+        <a href="#about"><span data-en lang="en">About</span><span data-zh lang="zh-CN" data-nosnippet>关于</span></a>
+        <a href="#focus"><span data-en lang="en">Focus</span><span data-zh lang="zh-CN" data-nosnippet>投资方向</span></a>
+        <a href="#experience"><span data-en lang="en">Experience</span><span data-zh lang="zh-CN" data-nosnippet>经历</span></a>
+        <a href="#contact"><span data-en lang="en">Contact</span><span data-zh lang="zh-CN" data-nosnippet>联系</span></a>
+      </div>
+      <button class="lang" id="langBtn" type="button" aria-label="Switch to Chinese">中文</button>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-controls="navLinks" aria-expanded="false">☰</button>
+    </div>
+  </nav>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow">
+            <span data-en lang="en">Early-stage venture capital</span>
+            <span data-zh lang="zh-CN" data-nosnippet>早期风险投资</span>
+          </div>
+          <h1 class="title">
+            <span data-en lang="en">Backing founders who build what matters next.</span>
+            <span data-zh lang="zh-CN" data-nosnippet>陪伴真正重要的创新，走向下一阶段。</span>
+          </h1>
+          <p class="lead">
+            <span data-en lang="en">I invest in ambitious founders at the intersection of science, technology and long-term societal value.</span>
+            <span data-zh lang="zh-CN" data-nosnippet>我关注科学、技术与长期社会价值的交汇点，并投资于有远见、有执行力的早期创始人。</span>
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#contact">
+              <span data-en lang="en">Start a conversation</span><span data-zh lang="zh-CN" data-nosnippet>开启交流</span> ↗
+            </a>
+            <a class="btn secondary" href="#focus">
+              <span data-en lang="en">Explore my focus</span><span data-zh lang="zh-CN" data-nosnippet>查看投资方向</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-card has-photo reveal" aria-label="Kelly Khoo in her office">
+          <img class="hero-photo" src="assets/daisy-office.png" alt="Kelly Khoo working in her office" />
+          <div class="orbit one"></div>
+          <div class="orbit two"></div>
+          <div class="hero-meta">
+            <span>Santa Monica · Los Angeles</span>
+            <span>Venture · Science · Scale</span>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-note">Scroll to explore</div>
+    </section>
+
+    <div class="container stats reveal">
+      <div class="stat">
+        <strong>Seed → Series A</strong>
+        <span data-en lang="en">Primary investment stage</span><span data-zh lang="zh-CN" data-nosnippet>主要投资阶段</span>
+      </div>
+      <div class="stat">
+        <strong>4</strong>
+        <span data-en lang="en">Core sectors</span><span data-zh lang="zh-CN" data-nosnippet>核心关注领域</span>
+      </div>
+      <div class="stat">
+        <strong>Long-term</strong>
+        <span data-en lang="en">Founder and value orientation</span><span data-zh lang="zh-CN" data-nosnippet>创始人与长期价值导向</span>
+      </div>
+    </div>
+
+    <section class="section" id="about">
+      <div class="container two-col">
+        <div class="reveal">
+          <div class="eyebrow"><span data-en lang="en">About</span><span data-zh lang="zh-CN" data-nosnippet>关于我</span></div>
+          <h2 class="section-title">
+            <span data-en lang="en">Capital with conviction.</span>
+            <span data-zh lang="zh-CN" data-nosnippet>有判断，也有耐心。</span>
+          </h2>
+        </div>
+        <div class="reveal">
+          <p class="quote">
+            <span data-en lang="en">I believe the best investments begin with <em>clarity of thought</em>, scientific integrity and founders who keep moving when the path is not obvious.</span>
+            <span data-zh lang="zh-CN" data-nosnippet>我相信，最好的投资始于<em>清晰的判断</em>、真实的科学验证，以及在路径尚不明朗时仍持续前行的创始人。</span>
+          </p>
+          <p class="muted">
+            <span data-en lang="en">Kelly Khoo is a Senior Associate at Crosscut Ventures in Santa Monica. She focuses on early-stage opportunities in biotechnology, frontier technology, climate technology and clean energy, with an emphasis on founder quality, scalability and durable impact.</span>
+            <span data-zh lang="zh-CN" data-nosnippet>Kelly Khoo 现任 Crosscut Ventures 投资经理，常驻圣莫尼卡。她专注于生物科技、前沿科技、气候科技与清洁能源的早期投资，重视创始人品质、商业可扩展性与长期影响力。</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="focus">
+      <div class="container">
+        <div class="reveal">
+          <div class="eyebrow"><span data-en lang="en">Investment focus</span><span data-zh lang="zh-CN" data-nosnippet>投资方向</span></div>
+          <h2 class="section-title">
+            <span data-en lang="en">Where rigorous science meets scalable ambition.</span>
+            <span data-zh lang="zh-CN" data-nosnippet>让严谨科学，遇见规模化野心。</span>
+          </h2>
+          <p class="lead">
+            <span data-en lang="en">I look for markets where technical breakthroughs can become enduring companies.</span>
+            <span data-zh lang="zh-CN" data-nosnippet>我寻找那些能将技术突破转化为长期价值企业的市场机会。</span>
+          </p>
+        </div>
+
+        <div class="focus-grid">
+          <article class="focus-card reveal">
+            <div class="focus-index">01</div>
+            <h3><span data-en lang="en">Biotechnology</span><span data-zh lang="zh-CN" data-nosnippet>生物科技</span></h3>
+            <p><span data-en lang="en">Platforms, therapeutics and tools grounded in credible science and meaningful clinical potential.</span><span data-zh lang="zh-CN" data-nosnippet>关注具备可信科学基础、明确临床潜力的平台、疗法与工具型公司。</span></p>
+          </article>
+          <article class="focus-card reveal">
+            <div class="focus-index">02</div>
+            <h3><span data-en lang="en">Frontier Technology</span><span data-zh lang="zh-CN" data-nosnippet>前沿科技</span></h3>
+            <p><span data-en lang="en">Deep technical innovation that can reshape infrastructure, industry and human capability.</span><span data-zh lang="zh-CN" data-nosnippet>投资能够重塑基础设施、产业效率与人类能力边界的深层技术创新。</span></p>
+          </article>
+          <article class="focus-card reveal">
+            <div class="focus-index">03</div>
+            <h3><span data-en lang="en">Climate Technology</span><span data-zh lang="zh-CN" data-nosnippet>气候科技</span></h3>
+            <p><span data-en lang="en">Solutions that deliver measurable environmental impact alongside compelling unit economics.</span><span data-zh lang="zh-CN" data-nosnippet>寻找兼具可衡量环境价值与优质商业模型的气候解决方案。</span></p>
+          </article>
+          <article class="focus-card reveal">
+            <div class="focus-index">04</div>
+            <h3><span data-en lang="en">Clean Energy</span><span data-zh lang="zh-CN" data-nosnippet>清洁能源</span></h3>
+            <p><span data-en lang="en">Technologies improving how energy is generated, stored, distributed and consumed.</span><span data-zh lang="zh-CN" data-nosnippet>关注能源生产、储存、分配与消费环节中的新技术与新模式。</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="container two-col">
+        <div class="reveal">
+          <div class="eyebrow"><span data-en lang="en">Experience</span><span data-zh lang="zh-CN" data-nosnippet>职业经历</span></div>
+          <h2 class="section-title">
+            <span data-en lang="en">A career shaped by investing, learning and rebuilding.</span>
+            <span data-zh lang="zh-CN" data-nosnippet>在投资、学习与重新出发中，形成自己的判断。</span>
+          </h2>
+        </div>
+        <div class="timeline reveal">
+          <div class="timeline-item">
+            <div class="timeline-year">Present</div>
+            <div>
+              <h3>Crosscut Ventures · Senior Associate</h3>
+              <p><span data-en lang="en">Early-stage investing across science-led and technology-driven categories.</span><span data-zh lang="zh-CN" data-nosnippet>专注科学驱动与技术驱动赛道的早期投资。</span></p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2020</div>
+            <div>
+              <h3>Crosscut Ventures · Venture Capital Director</h3>
+              <p><span data-en lang="en">Promoted to lead venture investment after two years managing the venture capital team.</span><span data-zh lang="zh-CN" data-nosnippet>担任风险投资小组长两年后，晋升为风险投资主管。</span></p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2018</div>
+            <div>
+              <h3>Crosscut Ventures · Venture Capital Team Lead</h3>
+              <p><span data-en lang="en">Promoted to lead the venture capital team after three years with the firm.</span><span data-zh lang="zh-CN" data-nosnippet>进入公司三年后，晋升为风险投资小组长。</span></p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2015</div>
+            <div>
+              <h3>Crosscut Ventures</h3>
+              <p><span data-en lang="en">Joined the firm to evaluate and support early-stage companies across emerging technology sectors.</span><span data-zh lang="zh-CN" data-nosnippet>加入 Crosscut Ventures，负责新兴科技领域早期项目的评估与支持。</span></p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2012–2014</div>
+            <div>
+              <h3>Drexel University · MBA</h3>
+              <p><span data-en lang="en">Advanced business training with a focus on strategy, finance and leadership.</span><span data-zh lang="zh-CN" data-nosnippet>系统学习战略、金融与领导力。</span></p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2012</div>
+            <div>
+              <h3>Drexel University · LeBow College of Business</h3>
+              <p><span data-en lang="en">Undergraduate foundation in business and finance.</span><span data-zh lang="zh-CN" data-nosnippet>完成商业与金融方向的本科教育。</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="reveal">
+          <div class="eyebrow"><span data-en lang="en">Investment principles</span><span data-zh lang="zh-CN" data-nosnippet>投资原则</span></div>
+          <h2 class="section-title">
+            <span data-en lang="en">What I value before the numbers become obvious.</span>
+            <span data-zh lang="zh-CN" data-nosnippet>在数字尚未证明一切之前，我更看重这些。</span>
+          </h2>
+        </div>
+        <div class="principles">
+          <div class="principle reveal">
+            <div class="focus-index">01</div>
+            <h3><span data-en lang="en">Founder integrity</span><span data-zh lang="zh-CN" data-nosnippet>创始人品质</span></h3>
+            <p><span data-en lang="en">Intellectual honesty, resilience and the ability to attract exceptional people.</span><span data-zh lang="zh-CN" data-nosnippet>诚实面对问题，具备韧性，并能吸引优秀人才。</span></p>
+          </div>
+          <div class="principle reveal">
+            <div class="focus-index">02</div>
+            <h3><span data-en lang="en">Evidence before narrative</span><span data-zh lang="zh-CN" data-nosnippet>证据先于故事</span></h3>
+            <p><span data-en lang="en">Especially in science-led companies, validation matters more than a polished pitch.</span><span data-zh lang="zh-CN" data-nosnippet>尤其在科学驱动型公司中，真实验证比漂亮叙事更重要。</span></p>
+          </div>
+          <div class="principle reveal">
+            <div class="focus-index">03</div>
+            <h3><span data-en lang="en">Scale with substance</span><span data-zh lang="zh-CN" data-nosnippet>规模与价值并重</span></h3>
+            <p><span data-en lang="en">Large markets matter, but only when the product creates durable and defensible value.</span><span data-zh lang="zh-CN" data-nosnippet>大市场很重要，但前提是产品能创造长期且可防御的价值。</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact reveal">
+          <div class="contact-grid">
+            <div>
+              <div class="eyebrow"><span data-en lang="en">Contact</span><span data-zh lang="zh-CN" data-nosnippet>联系我</span></div>
+              <h2 class="section-title">
+                <span data-en lang="en">Building something ambitious?</span>
+                <span data-zh lang="zh-CN" data-nosnippet>正在打造一件真正有野心的事情？</span>
+              </h2>
+              <p class="lead">
+                <span data-en lang="en">I welcome thoughtful conversations with founders, operators and long-term partners.</span>
+                <span data-zh lang="zh-CN" data-nosnippet>欢迎创始人、行业专家与长期合作伙伴进行高质量交流。</span>
+              </p>
+            </div>
+            <div class="contact-actions">
+              <a class="btn primary" href="mailto:Kellykhoo0820@gmail.com">
+                <span data-en lang="en">Send an email</span><span data-zh lang="zh-CN" data-nosnippet>发送邮件</span> ↗
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Kelly Khoo. All rights reserved.</span>
+      <span>Santa Monica, California</span>
+    </div>
+  </footer>
+
+  <script>
+    const body = document.body;
+    const nav = document.getElementById('nav');
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+
+
+    const langBtn = document.getElementById('langBtn');
+    langBtn.addEventListener('click', () => {
+      const isChinese = body.classList.toggle('zh');
+      document.documentElement.lang = isChinese ? 'zh-CN' : 'en';
+      langBtn.textContent = isChinese ? 'English' : '中文';
+      langBtn.setAttribute('aria-label', isChinese ? 'Switch to English' : 'Switch to Chinese');
+    });
+    menuBtn.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(isOpen));
+    });
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { navLinks.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); }));
+
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 12);
+    });
+
+    if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: .12 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    }
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
