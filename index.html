@@ -257,6 +257,13 @@
       *{scroll-behavior:auto!important;transition:none!important}
       .reveal{opacity:1;transform:none}
     }
+    .hero-insight{padding:28px 0 12px 35px;max-width:460px}
+    .hero-insight-label{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-2)}
+    .hero-insight h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(30px,3vw,43px);line-height:1.2;font-weight:400;letter-spacing:-.025em;margin:20px 0 30px}
+    .hero-insight-list{border-top:1px solid var(--line)}
+    .hero-insight-list div{padding:13px 0;border-bottom:1px solid var(--line);font-size:15px;color:#e5e1d8}
+    .hero-insight-location{margin:26px 0 0;color:var(--accent-2);font-size:11px;font-weight:700;letter-spacing:.15em}
+    @media (max-width:900px){.hero-insight{padding:0;max-width:none}.hero-insight h2{margin:16px 0 22px}}
   </style>
 </head>
 <body>
@@ -300,13 +307,16 @@
           </div>
         </div>
 
-        <div class="hero-card reveal">
-          <div class="orbit one"></div>
-          <div class="orbit two"></div>
-          <div class="hero-meta">
-            <span>Santa Monica · Los Angeles</span>
-            <span>Venture · Science · Scale</span>
+        <div class="hero-insight reveal">
+          <div class="hero-insight-label"><span data-en lang="en">Investment focus</span><span data-zh lang="zh-CN" data-nosnippet>投资方向</span></div>
+          <h2><span data-en lang="en">Ideas that shape<br>what comes next.</span><span data-zh lang="zh-CN" data-nosnippet>关注塑造未来的创新。</span></h2>
+          <div class="hero-insight-list">
+            <div><span data-en lang="en">Biotechnology</span><span data-zh lang="zh-CN" data-nosnippet>生物科技</span></div>
+            <div><span data-en lang="en">Frontier Technology</span><span data-zh lang="zh-CN" data-nosnippet>前沿科技</span></div>
+            <div><span data-en lang="en">Climate Technology</span><span data-zh lang="zh-CN" data-nosnippet>气候科技</span></div>
+            <div><span data-en lang="en">Clean Energy</span><span data-zh lang="zh-CN" data-nosnippet>清洁能源</span></div>
           </div>
+          <p class="hero-insight-location">SANTA MONICA · LOS ANGELES</p>
         </div>
       </div>
       <div class="scroll-note">Scroll to explore</div>
